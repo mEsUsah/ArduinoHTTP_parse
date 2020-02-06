@@ -11,4 +11,12 @@ If not found, wil return a String object that is "-1"
 * Example function call = parseRequest(requestString, "led01");
 * Example return valie = "1"
 
-Read psudo code for in scetch for in debth explenation.
+Code Explanation
+
+* If the first line of the HTTP request contains the variable we are looking for, find the value of it. If the variable is not found, return "-1".
+* Check where the variable value starts.
+* beginning of variable name + number of characters in the variable + the "=" symbol.
+* Check if there are other variables after the target variable.
+* If there is, the variable value stops before & symbol.
+* If no other variables after the variable we are looking for, there is a empty space before the "HTTP/1.1".
+* Return the value of the variable we are searching for as a Sting object.
